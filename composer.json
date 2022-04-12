@@ -1,0 +1,26 @@
+{
+    "name": "wakaloka/edd-sl-plugin-updater",
+    "type": "library",
+    "description": "Easy Digital Downloads WordPress plugin updater class for Software Licenses",
+    "keywords": [
+        "edd",
+        "updates",
+        "wordpress"
+    ],
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "EasyDigitalDownloads",
+            "email": "contact@easydigitaldownloads.com"
+        },
+        {
+            "name": "Wakaloka",
+            "email": "git@wakaloka.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "EDD_SL_Plugin_Updater.php"
+        ]
+    }
+}
