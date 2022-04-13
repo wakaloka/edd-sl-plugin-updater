@@ -42,8 +42,8 @@ class PluginUpdater
 	{
 		$this->payload   = $payload;
 		$this->plugin_id = $plugin_id;
-		
-        add_action('init', [$this, 'plugin_update']);
+
+		add_action('init', [$this, 'plugin_update']);
 	}
 
 	/**
