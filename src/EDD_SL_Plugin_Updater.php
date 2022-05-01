@@ -1,6 +1,6 @@
 <?php
 
-namespace Wakaloka\Lib;
+namespace Wakaloka\Lib\EDD;
 
 use stdClass;
 
