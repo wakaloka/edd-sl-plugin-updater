@@ -63,7 +63,13 @@ class PluginUpdater
 				}
 			}
 		} catch (\Throwable $th) {
-			do_action('wakaloka_plugin_update_error', $th);
+			/**
+			 * Hook for handling the exception.
+			 * 
+			 * @param string the plugin ID that instantiated the PluginUpdater class.
+			 * @param Exception $th The exception.
+			 */
+			do_action('wakaloka_plugin_update_error', $this->plugin_id, $th);
 		}
 	}
 
