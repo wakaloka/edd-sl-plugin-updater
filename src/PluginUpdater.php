@@ -53,13 +53,17 @@ class PluginUpdater
 	 */
 	public function plugin_update()
 	{
-		if ($this->is_activated()) {
-			$doing_cron = defined('DOING_CRON') && DOING_CRON;
-			if (!(current_user_can('manage_options') && $doing_cron)) {
-				if (!$this->edd_sl) {
-					$this->edd_sl = new EDD_SL_Plugin_Updater($this->payload['store_url'], $this->payload['plugin_file'], $this->payload);
+		try {
+			if ($this->is_activated()) {
+				$doing_cron = defined('DOING_CRON') && DOING_CRON;
+				if (!(current_user_can('manage_options') && $doing_cron)) {
+					if (!$this->edd_sl) {
+						$this->edd_sl = new EDD_SL_Plugin_Updater($this->payload['store_url'], $this->payload['plugin_file'], $this->payload);
+					}
 				}
 			}
+		} catch (\Throwable $th) {
+			do_action('wakaloka_plugin_update_error', $th);
 		}
 	}
 
