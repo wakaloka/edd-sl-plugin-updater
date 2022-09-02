@@ -20,7 +20,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Wakaloka\\Lib\\EDD\\": "src/"
+            "EDD_SL\\": "src/"
         }
     }
 }

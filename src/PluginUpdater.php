@@ -1,6 +1,6 @@
 <?php
 
-namespace Wakaloka\Lib\EDD;
+namespace EDD_SL;
 
 use Exception;
 use WP_Error;
@@ -48,8 +48,6 @@ class PluginUpdater
 
 	/**
 	 * Run the plugin update process.
-	 * 
-	 * @throws Exception 
 	 */
 	public function plugin_update()
 	{
